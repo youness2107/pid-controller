@@ -1,6 +1,26 @@
 # CarND-Controls-PID
 Self-Driving Car Engineer Nanodegree Program
 
+
+##The effect of each of the P, I, D components:
+
+* The term P is proportional to the Cross Track Error. For instance if the error is large then the steering angle should be large as well, if the error is small the steering angle should be small.
+
+* The term I stands for integral and tries to reduce a possible steering bias
+
+* The term D is proportional to the derivative of the Cross Track Error. This gives the controller 
+  a sense of how fast the Cross Track Error is being corrected, and results in gracefully approaching the target. (Without he D term the vehicle overshoots, this behavior becomes chaotic at turns) 
+
+##How the parameters were chosen
+
+First part was to try only a P controller, this resulted in the car oscillating largely from right to left and getting off track during turns. 
+
+The second part was to evolve to a PD controller, with manual tuning of both Kp and Kd the car was able to successfully drive for multiple laps safely inside the road.
+
+The third part was to introduce the I controller as well, this gave a tiny enhancement to PD controller. 
+
+The final result was a PID Controller with Kp = -0.16, Ki = -0.0002 and Kd = -2.7, these values were reached with manual tuning using a "binary search" (i.e halving and doubling of values coupled with trial and error)
+
 ---
 
 ## Dependencies
