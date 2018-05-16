@@ -2,7 +2,7 @@
 Self-Driving Car Engineer Nanodegree Program
 
 
-##The effect of each of the P, I, D components:
+## The effect of each of the P, I, D components:
 
 * The term P is proportional to the Cross Track Error. For instance if the error is large then the steering angle should be large as well, if the error is small the steering angle should be small.
 
@@ -11,7 +11,7 @@ Self-Driving Car Engineer Nanodegree Program
 * The term D is proportional to the derivative of the Cross Track Error. This gives the controller 
   a sense of how fast the Cross Track Error is being corrected, and results in gracefully approaching the target. (Without he D term the vehicle overshoots, this behavior becomes chaotic at turns) 
 
-##How the parameters were chosen
+## How the parameters were chosen
 
 First part was to try only a P controller, this resulted in the car oscillating largely from right to left and getting off track during turns. 
 
